@@ -8,13 +8,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #9099C7; /* Baggrundsfarve */
-    color: #FFF; /* Tekstfarve */
+    background-color: #9099C7;
+    color: #FFF;
 }
 
 /* Header styles */
 .header {
-    background-color: #6B76B6; /* Mørkere blå nuance */
+    background-color: #6B76B6;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,10 +28,7 @@ body {
 .navigation__list {
     display: flex;
     list-style: none;
-}
-
-.navigation__item {
-    margin-left: 20px;
+    gap: 20px; /* Gør afstand mellem menupunkter ensartet */
 }
 
 .navigation__link {
@@ -43,41 +40,49 @@ body {
 }
 
 .navigation__link:hover {
-    background-color: #4D5A99; /* Hover effekt */
+    background-color: #4D5A99;
     border-radius: 5px;
 }
 
 /* Content styles */
 .content {
-    padding: 20px;
+    padding: 40px 20px;
+    display: grid;
+    gap: 2rem; /* Ensartet afstand mellem sektioner */
 }
 
+/* Sektioner bruger CSS Grid */
 .content__section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner: billede og tekst */
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    gap: 20px; /* Luft mellem kolonner */
 }
 
-.content__section--right .content__text {
-    order: 1;
+.content__section--right {
+    grid-template-areas: 
+        "text image";
 }
 
-.content__section--right .content__image {
-    order: 2;
-}
-
-.content__section--left .content__text {
-    order: 2;
-}
-
-.content__section--left .content__image {
-    order: 1;
+.content__section--left {
+    grid-template-areas: 
+        "image text";
 }
 
 .content__text {
-    flex: 1;
-    margin: 10px;
+    grid-area: text;
+    
+}
+
+.content__image {
+    grid-area: image;
+    text-align: center;
+}
+
+.content__image-element {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .content__heading {
@@ -88,17 +93,6 @@ body {
 .content__paragraph {
     font-size: 1.2rem;
     line-height: 1.5;
-}
-
-.content__image {
-    flex: 1;
-    text-align: center;
-}
-
-.content__image-element {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Back button */
@@ -134,46 +128,21 @@ body {
         text-align: center;
     }
 
-    .header__logo,
-    .navigation {
-        margin-bottom: 10px; /* Luft mellem logo og navigation */
-    }
-
-    .header__logo {
-        justify-content: center; /* Centrer logo */
-    }
-
     .navigation__list {
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
     }
 
-    .navigation__item {
-        margin: 5px 0; /* Reduceret afstand */
-    }{
-    .about {
-        flex-direction: column; /* For små skærme ændres layoutet til en kolonne */
-        text-align: center; /* Centrer tekst og billede */
+    .content__section {
+        grid-template-columns: 1fr; /* Gør sektioner enkeltkolonner på små skærme */
+        grid-template-areas:
+            "image"
+            "text";
+        text-align: center; /* Centrer tekst og billeder */
     }
 
-    .about__image {
-        width: 80%; /* Gør billedet større på små skærme */
-        margin-bottom: 1rem; /* Giver lidt luft mellem billede og tekst */
-    }
-
-    .about__text {
-        max-width: 100%; /* Sørg for, at teksten fylder hele bredden på små skærme */
-    }
-
-    .about__heading {
-        font-size: 2rem; /* Reduceret heading */
-    }
-
-    .about__text {
-        margin-bottom: 30px; /* For bedre luft mellem tekst og billeder */
-    }
-
-    .footer__text {
-        font-size: 1rem; /* Øger tekstens læsbarhed */
+    .content__image-element {
+        max-width: 80%; /* Tilpas billedstørrelse */
+        margin: 0 auto; /* Centrer billeder */
     }
 }
