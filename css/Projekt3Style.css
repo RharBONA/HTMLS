@@ -1,0 +1,179 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #9099C7; /* Baggrundsfarve */
+    color: #FFF; /* Tekstfarve */
+}
+
+/* Header styles */
+.header {
+    background-color: #6B76B6; /* Mørkere blå nuance */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__logo-image {
+    height: 50px;
+}
+
+.navigation__list {
+    display: flex;
+    list-style: none;
+}
+
+.navigation__item {
+    margin-left: 20px;
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.navigation__link:hover {
+    background-color: #4D5A99; /* Hover effekt */
+    border-radius: 5px;
+}
+
+/* Content styles */
+.content {
+    padding: 20px;
+}
+
+.content__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.content__section--right .content__text {
+    order: 1;
+}
+
+.content__section--right .content__image {
+    order: 2;
+}
+
+.content__section--left .content__text {
+    order: 2;
+}
+
+.content__section--left .content__image {
+    order: 1;
+}
+
+.content__text {
+    flex: 1;
+    margin: 10px;
+}
+
+.content__heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.content__paragraph {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.content__image {
+    flex: 1;
+    text-align: center;
+}
+
+.content__image-element {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Back button */
+.content__back {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content__back-link {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #4D5A99;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.content__back-link:hover {
+    background-color: #374480;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #6B76B6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header__logo,
+    .navigation {
+        margin-bottom: 10px; /* Luft mellem logo og navigation */
+    }
+
+    .header__logo {
+        justify-content: center; /* Centrer logo */
+    }
+
+    .navigation__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation__item {
+        margin: 5px 0; /* Reduceret afstand */
+    }{
+    .about {
+        flex-direction: column; /* For små skærme ændres layoutet til en kolonne */
+        text-align: center; /* Centrer tekst og billede */
+    }
+
+    .about__image {
+        width: 80%; /* Gør billedet større på små skærme */
+        margin-bottom: 1rem; /* Giver lidt luft mellem billede og tekst */
+    }
+
+    .about__text {
+        max-width: 100%; /* Sørg for, at teksten fylder hele bredden på små skærme */
+    }
+
+    .about__heading {
+        font-size: 2rem; /* Reduceret heading */
+    }
+
+    .about__text {
+        margin-bottom: 30px; /* For bedre luft mellem tekst og billeder */
+    }
+
+    .footer__text {
+        font-size: 1rem; /* Øger tekstens læsbarhed */
+    }
+}
