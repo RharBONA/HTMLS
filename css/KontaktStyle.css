@@ -9,6 +9,10 @@
     line-height: 1.6;
     background-color: #FDE8BB; /* Styletile baggrundsfarve */
     color: #090508;
+    /* Disse linjer er tilføjet */
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; /* Sikrer at siden fylder hele vinduet */
   }
   
   /* Header styles */
@@ -57,6 +61,11 @@
   }
   
   /* Kontakt Sektion */
+  main.contact {
+ 
+    flex: 1; /* Sørgede for at elementet fylte alt mellemrum mellem footer og header så der ikke længere var det grimme hul i midten.*/
+}
+  
   .contact__intro {
     padding: 2rem;
     text-align: center;
@@ -100,13 +109,13 @@
     flex-shrink: 0;
   }
   
-  /* Footer styles */
-  .footer {
+/* Footer styles */
+.footer {
     background-color: #090508; /* Mørk kontrast til header */
     color: #FDE8BB;
     text-align: center;
     padding: 15px 0;
-  }
+}
   
   .footer__text {
     font-size: 0.9rem;
@@ -145,6 +154,7 @@
     .contact__info-item {
       font-size: 1rem;
     }
+    
     .footer__text {
         font-size: 1rem; /* Øger tekstens læsbarhed */
     }
