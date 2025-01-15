@@ -12,13 +12,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #FDE8BB; /* Styletile baggrundsfarve */
+    background-color: #fe520c; /* Styletile baggrundsfarve */
     color: #090508;
 }
 
 /* Header styles */
 .header {
-    background-color: #9099C7; /* Styletile farve */
+    background-color: #090508; /* Styletile farve */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
