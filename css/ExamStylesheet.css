@@ -353,7 +353,36 @@ body {
 /* ========================= */
 
 
+/* Projekter */
+.projects {
+    padding: 2rem;
+    background-color: #262626;
+    text-align: center;
+    margin: 20px 0; /* fiksede min C.R.A.P!!!!!! tog 3 timer at finde frem til noget så simpelt, jaja så husker jeg det next time*/
+}
 
+.projects__heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #fe520c;
+    text-align: center;
+}
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.projects__item {
+    text-align: center;
+}
+
+.projects__name {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
 
 
 /* ========================= */
