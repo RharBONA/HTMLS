@@ -520,6 +520,12 @@ body {
     margin-bottom: 1.5rem;
     color: #fe520c;
   }
+
+  .contact__text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
   .contact__content {
     display: flex;
     align-items: center;
