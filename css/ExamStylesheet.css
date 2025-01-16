@@ -10,19 +10,25 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'inter', sans-serif;
     line-height: 1.6;
-    background-color: #FDE8BB; /* Styletile baggrundsfarve */
-    color: #090508;
-}
+    background-color: #262626; /* Styletile baggrundsfarve */
+    color: #ffffff;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; /* Sikrer at siden fylder hele vinduet */
+  }
+
 
 /* Header styles */
 .header {
-    background-color: #9099C7; /* Styletile farve */
-    padding: 10px 20px;
+    background-color: #262626; /* Mørkere, moderne baggrundsfarve */
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tilføjet skygge for dybde */
+    border-bottom: 2px solid #fe520c; /* Hvid streg under headeren */
 }
 
 .header__logo {
