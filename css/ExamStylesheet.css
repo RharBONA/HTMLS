@@ -109,21 +109,47 @@ body {
 .intro__image {
     width: 100%;
     max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer styles */
 .footer {
-    background-color: #090508; /* Mørk kontrast til header */
-    color: #FDE8BB;
+    background-color: #262626; /* Matcher headerens baggrund */
+    color: #ffffff; /* Lysere tekstfarve for bedre kontrast */
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
+    font-size: 0.95rem; /* Let justering for moderne skriftstørrelse */
+    border-top: 2px solid #fe520c; /* Hvid streg over footer */
+    margin-top: auto;
 }
 
 .footer__text {
+    margin: 0;
     font-size: 0.9rem;
-}
+    opacity: 0.8; /* Blødere tekst for mindre visuel støj */
+    transition: opacity 0.3s ease; /* Effekt ved hover */
+  }
+
+  .footer__text:hover {
+    opacity: 1; /* Fremhæv tekst ved hover */
+  }
+  
+  .footer__links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ensartet spacing mellem links */
+    margin-top: 10px;
+  }
+  
+  .footer__link {
+    text-decoration: none;
+    color: #fe520c; /* Accentfarve */
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__link:hover {
+    color: #f0f0f0; /* Ændring ved hover for fokus */
+  }
 
 /* Responsive Design */
 @media (max-width: 768px) {
