@@ -19,7 +19,6 @@ body {
     min-height: 100vh; /* Sikrer at siden fylder hele vinduet */
   }
 
-
 /* Header styles */
 .header {
     background-color: #262626; /* Mørkere, moderne baggrundsfarve */
@@ -38,42 +37,46 @@ body {
 
 .header__logo-image {
     height: 50px;
-}
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Tilføjet skygge til logo */
+  }
 
 .navigation {
     display: flex;
     align-items: center;
-}
+    gap: 20px; /* Brug 'gap' for mere moderne spacing */
+  }
 
 .navigation__list {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-}
+    gap: 15px; /* Ensartet spacing */
+  }
 
 .navigation__item {
-    margin-left: 20px;
-}
+    position: relative; /* Gør det nemt at tilføje effekter senere */
+  }
 
 .navigation__link {
     text-decoration: none;
-    color: #FDE8BB;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
+    color: #f0f0f0; /* Lysere farve for bedre kontrast */
+    font-weight: 500;
+    font-size: 1rem; /* Brug rem for bedre skalering */
+    padding: 10px 20px;
+    border-radius: 30px; /* Giver en pill-shape for modernitet */
     transition: background-color 0.3s ease, color 0.3s ease;
-}
+  }
 
 .navigation__link--active {
-    background-color: rgba(0, 0, 0, 0.85); /* Aktiv baggrund */
-    color: #FFF;
-}
+    background-color: #fe520c; /* Fremhæv aktiv link */
+    color: #ffffff;
+  }
 
 .navigation__link:hover {
-    background-color: rgba(0, 0, 0, 0.75); /* Hover baggrund */
-    color: #FFF;
-}
+    background-color: #444444; /* Blødere hover-effekt */
+    color: #ffffff;
+  }
 
 /* Main content */
 .main-content {
@@ -88,7 +91,7 @@ body {
 .intro__heading {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #090508;
+    color: #fe520c ;
 }
 
 .intro__text {
