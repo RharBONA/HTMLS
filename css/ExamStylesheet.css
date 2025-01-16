@@ -499,67 +499,6 @@ body {
 /*         Kontakt           */
 /* ========================= */
 
-/* Global styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #FDE8BB; /* Styletile baggrundsfarve */
-    color: #090508;
-    /* Disse linjer er tilføjet */
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh; /* Sikrer at siden fylder hele vinduet */
-  }
-  
-  /* Header styles */
-  .header {
-    background-color: #9099C7; /* Styletile farve */
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header__logo {
-    display: flex;
-    align-items: center;
-  }
-  .header__logo-image {
-    height: 50px;
-  }
-  .navigation {
-    display: flex;
-    align-items: center;
-  }
-  .navigation__list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .navigation__item {
-    margin-left: 20px;
-  }
-  .navigation__link {
-    text-decoration: none;
-    color: #FDE8BB;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  .navigation__link--active {
-    background-color: rgba(0, 0, 0, 0.85); /* Aktiv baggrund */
-    color: #FFF;
-  }
-  .navigation__link:hover {
-    background-color: rgba(0, 0, 0, 0.75); /* Hover baggrund */
-    color: #FFF;
-  }
   
   /* Kontakt Sektion */
   main.contact {
@@ -570,7 +509,7 @@ body {
   .contact__intro {
     padding: 2rem;
     text-align: center;
-    background-color: #FDE8BB;
+    background-color: #262626;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -579,7 +518,7 @@ body {
   .contact__heading {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #090508;
+    color: #fe520c;
   }
   .contact__content {
     display: flex;
@@ -603,24 +542,12 @@ body {
     max-width: 300px;
   }
   .contact__image {
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     height: auto;
     flex-shrink: 0;
   }
   
-/* Footer styles */
-.footer {
-    background-color: #090508; /* Mørk kontrast til header */
-    color: #FDE8BB;
-    text-align: center;
-    padding: 15px 0;
-}
-  
-  .footer__text {
-    font-size: 0.9rem;
-  }
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
